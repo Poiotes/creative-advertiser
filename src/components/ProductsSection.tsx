@@ -3,55 +3,55 @@ import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ChevronRight, Award, Truck, Clock } from 'lucide-react';
 
-// Product categories and items
+// Kategorie produktów i elementy
 const categories = [
-  { id: 'promo', name: 'Promotional Products' },
-  { id: 'print', name: 'Print Materials' },
-  { id: 'event', name: 'Event Essentials' },
+  { id: 'promo', name: 'Produkty Promocyjne' },
+  { id: 'print', name: 'Materiały Drukowane' },
+  { id: 'event', name: 'Artykuły Eventowe' },
 ];
 
 const products = [
   {
     id: 1,
-    name: 'Premium Beach Chairs',
+    name: 'Premium Leżaki Plażowe',
     category: 'promo',
-    description: 'Comfortable, branded beach chairs that make a statement at outdoor events.',
-    image: 'https://images.unsplash.com/photo-1517646709561-1eec2bb78efa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    description: 'Wygodne, brandowane leżaki plażowe, które przyciągają uwagę na imprezach plenerowych.',
+    image: 'https://images.unsplash.com/photo-1589686000081-11d77fc0a0e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 2,
-    name: 'Custom Lanyards',
+    name: 'Personalizowane Smycze',
     category: 'promo',
-    description: 'High-quality lanyards with your brand logo, perfect for conferences and offices.',
-    image: 'https://images.unsplash.com/photo-1622037022028-42f6d1938bbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    description: 'Wysokiej jakości smycze z logo Twojej firmy, idealne na konferencje i do biura.',
+    image: 'https://images.unsplash.com/photo-1586769852044-692d6e3703f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 3,
-    name: 'Multi-functional Bandanas',
+    name: 'Wielofunkcyjne Chusty',
     category: 'promo',
-    description: 'Versatile branded bandanas that can be worn multiple ways.',
-    image: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    description: 'Wszechstronne brandowane chusty, które można nosić na wiele sposobów.',
+    image: 'https://images.unsplash.com/photo-1588625500633-a0cd518f0f60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 4,
-    name: 'Event Wristbands',
+    name: 'Opaski Eventowe',
     category: 'event',
-    description: 'Durable, waterproof wristbands for event access and brand visibility.',
-    image: 'https://images.unsplash.com/photo-1522152553310-a05a36c98be2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    description: 'Trwałe, wodoodporne opaski na imprezy, zapewniające dostęp i widoczność marki.',
+    image: 'https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 5,
-    name: 'Premium Business Cards',
+    name: 'Premium Wizytówki',
     category: 'print',
-    description: 'Stand out with our premium finish, high-quality business cards.',
-    image: 'https://images.unsplash.com/photo-1640420339253-7e2c9fefb4ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    description: 'Wyróżnij się dzięki naszym wizytówkom premium z wysokiej jakości wykończeniem.',
+    image: 'https://images.unsplash.com/photo-1572048572872-2394404cf1f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 6,
-    name: 'Custom Catalogs',
+    name: 'Personalizowane Katalogi',
     category: 'print',
-    description: 'Beautifully designed catalogs that showcase your products elegantly.',
-    image: 'https://images.unsplash.com/photo-1596443686652-3f923e5e25da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    description: 'Pięknie zaprojektowane katalogi, które elegancko prezentują Twoje produkty.',
+    image: 'https://images.unsplash.com/photo-1520807940693-216ccf06d401?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
 ];
 
@@ -68,13 +68,13 @@ const ProductsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-700 font-medium text-sm mb-4">
-            Our Product Range
+            Nasza Oferta Produktowa
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-gradient">Premium Products</span> For Your Brand
+            <span className="text-gradient">Premium Produkty</span> Dla Twojej Marki
           </h2>
           <p className="text-gray-600">
-            From promotional items to beautiful print materials, we offer everything you need to make your brand stand out.
+            Od artykułów promocyjnych po piękne materiały drukowane - oferujemy wszystko, czego potrzebujesz, aby Twoja marka się wyróżniała.
           </p>
         </div>
 
@@ -117,7 +117,7 @@ const ProductsSection = () => {
                   href="#contact" 
                   className="inline-flex items-center text-blue-600 font-medium hover:text-purple-600 transition-colors"
                 >
-                  Request Quote <ChevronRight size={16} className="ml-1" />
+                  Zapytaj o wycenę <ChevronRight size={16} className="ml-1" />
                 </a>
               </div>
             </div>
@@ -126,7 +126,7 @@ const ProductsSection = () => {
 
         <div className="text-center mt-12">
           <a href="#contact" className="inline-block rounded-full px-8 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:shadow-lg transition-all">
-            Discuss Your Project
+            Omów swój projekt
           </a>
         </div>
 
@@ -136,9 +136,9 @@ const ProductsSection = () => {
             <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-5">
               <Award className="text-blue-600" size={24} />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
+            <h3 className="text-xl font-semibold mb-2">Najwyższa Jakość</h3>
             <p className="text-gray-600">
-              We never compromise on quality, ensuring your promotional materials leave a lasting impression.
+              Nigdy nie idziemy na kompromis w kwestii jakości, zapewniając, że Twoje materiały promocyjne zostawiają trwałe wrażenie.
             </p>
           </div>
           
@@ -146,9 +146,9 @@ const ProductsSection = () => {
             <div className="w-14 h-14 rounded-full bg-purple-50 flex items-center justify-center mb-5">
               <Truck className="text-purple-600" size={24} />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
+            <h3 className="text-xl font-semibold mb-2">Szybka Dostawa</h3>
             <p className="text-gray-600">
-              With our efficient production and delivery process, your products will reach you on time, every time.
+              Dzięki naszemu wydajnemu procesowi produkcji i dostawy, Twoje produkty dotrą do Ciebie na czas, za każdym razem.
             </p>
           </div>
           
@@ -156,9 +156,9 @@ const ProductsSection = () => {
             <div className="w-14 h-14 rounded-full bg-pink-50 flex items-center justify-center mb-5">
               <Clock className="text-pink-600" size={24} />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Dedicated Support</h3>
+            <h3 className="text-xl font-semibold mb-2">Dedykowane Wsparcie</h3>
             <p className="text-gray-600">
-              Our team provides personalized service from design to delivery, ensuring your complete satisfaction.
+              Nasz zespół zapewnia spersonalizowaną obsługę od projektu do dostawy, gwarantując Twoją pełną satysfakcję.
             </p>
           </div>
         </div>

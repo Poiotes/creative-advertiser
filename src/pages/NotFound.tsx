@@ -26,15 +26,15 @@ const NotFound = () => {
           <div className="w-32 h-32 bg-gray-50 rounded-full mx-auto mb-8 flex items-center justify-center">
             <span className="text-7xl font-bold text-gradient">404</span>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Page Not Found</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Strona nie znaleziona</h1>
           <p className="text-gray-600 mb-8">
-            The page you're looking for doesn't exist or has been moved. Please check the URL or navigate back to the home page.
+            Strona, której szukasz, nie istnieje lub została przeniesiona. Sprawdź adres URL lub wróć do strony głównej.
           </p>
           <Link 
             to="/" 
             className="inline-block rounded-full px-8 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:shadow-lg transition-all"
           >
-            Return to Home
+            Powrót do strony głównej
           </Link>
         </div>
       </main>

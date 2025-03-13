@@ -10,79 +10,79 @@ const expertiseAreas = [
   {
     id: 'promotional',
     icon: ShoppingBag,
-    title: 'Promotional Products',
-    description: 'From branded merchandise to corporate gifts, we create promotional items that leave a lasting impression.',
+    title: 'Produkty Promocyjne',
+    description: 'Od towarów z logo po upominki firmowe, tworzymy artykuły promocyjne, które pozostawiają trwałe wrażenie.',
     details: [
-      'Beach chairs, lanyards, and multi-functional bandanas',
-      'Corporate gifts and branded merchandise',
-      'Eco-friendly promotional products',
-      'Tech accessories and gadgets',
-      'Custom apparel and wearables'
+      'Leżaki plażowe, smycze i wielofunkcyjne chusty',
+      'Upominki firmowe i branded merchandise',
+      'Ekologiczne produkty promocyjne',
+      'Akcesoria technologiczne i gadżety',
+      'Niestandardowa odzież i produkty do noszenia'
     ]
   },
   {
     id: 'print',
     icon: PenTool,
-    title: 'Print Materials',
-    description: 'High-quality print materials designed to enhance your brand presence and marketing efforts.',
+    title: 'Materiały Drukowane',
+    description: 'Wysokiej jakości materiały drukowane, zaprojektowane by wzmocnić obecność Twojej marki i wysiłki marketingowe.',
     details: [
-      'Business cards, letterheads, and stationery',
-      'Brochures, catalogs, and flyers',
-      'Posters, banners, and signage',
-      'Packaging design and production',
-      'Annual reports and corporate documents'
+      'Wizytówki, papiery firmowe i artykuły biurowe',
+      'Broszury, katalogi i ulotki',
+      'Plakaty, banery i oznakowanie',
+      'Projektowanie i produkcja opakowań',
+      'Raporty roczne i dokumenty firmowe'
     ]
   },
   {
     id: 'event',
     icon: Calendar,
-    title: 'Event Essentials',
-    description: 'Essential items for successful events, from wristbands to complete event branding packages.',
+    title: 'Artykuły Eventowe',
+    description: 'Niezbędne artykuły do udanych eventów, od opasek po kompletne pakiety brandingowe na imprezy.',
     details: [
-      'Custom event wristbands and badges',
-      'Branded event tents and booths',
-      'Banners, flags, and directional signage',
-      'Conference materials and gift bags',
-      'Award ceremonies and recognition items'
+      'Personalizowane opaski i identyfikatory eventowe',
+      'Brandowane namioty i stoiska eventowe',
+      'Banery, flagi i oznakowanie kierunkowe',
+      'Materiały konferencyjne i torby upominkowe',
+      'Ceremonie wręczania nagród i artykuły uznaniowe'
     ]
   },
   {
     id: 'branding',
     icon: Layout,
-    title: 'Branding Solutions',
-    description: 'Comprehensive branding solutions to help you establish and maintain a consistent brand identity.',
+    title: 'Rozwiązania Brandingowe',
+    description: 'Kompleksowe rozwiązania brandingowe, które pomagają ustanowić i utrzymać spójną tożsamość marki.',
     details: [
-      'Brand identity development',
-      'Style guides and brand standards',
-      'Visual identity implementation',
-      'Brand consistency across all materials',
-      'Brand refresh and revitalization'
+      'Rozwój tożsamości marki',
+      'Przewodniki stylu i standardy marki',
+      'Wdrażanie tożsamości wizualnej',
+      'Spójność marki we wszystkich materiałach',
+      'Odświeżanie i rewitalizacja marki'
     ]
   },
   {
     id: 'corporate',
     icon: Briefcase,
-    title: 'Corporate Services',
-    description: 'Specialized services designed to meet the unique needs of corporate clients and large organizations.',
+    title: 'Usługi Korporacyjne',
+    description: 'Specjalistyczne usługi zaprojektowane, aby spełnić unikalne potrzeby klientów korporacyjnych i dużych organizacji.',
     details: [
-      'Custom corporate gifts and recognition programs',
-      'Company-wide branded merchandise',
-      'Corporate event packages',
-      'Internal communication materials',
-      'Employee engagement campaigns'
+      'Niestandardowe upominki firmowe i programy uznaniowe',
+      'Artykuły z logo firmy dla całej organizacji',
+      'Pakiety na imprezy firmowe',
+      'Materiały do komunikacji wewnętrznej',
+      'Kampanie angażujące pracowników'
     ]
   },
   {
     id: 'customer',
     icon: Smile,
-    title: 'Customer Experience',
-    description: 'Enhance your customer experience with branded touchpoints that delight and engage.',
+    title: 'Doświadczenia Klienta',
+    description: 'Wzbogać doświadczenia klientów za pomocą brandowanych punktów styku, które zachwycają i angażują.',
     details: [
-      'Customer welcome packages',
-      'Branded packaging and unboxing experiences',
-      'Loyalty program materials',
-      'Thank you gifts and rewards',
-      'Customer journey touchpoints'
+      'Pakiety powitalne dla klientów',
+      'Opakowania z logo i doświadczenia rozpakowywania',
+      'Materiały programów lojalnościowych',
+      'Upominki i nagrody z podziękowaniami',
+      'Punkty styku w podróży klienta'
     ]
   }
 ];
@@ -103,13 +103,13 @@ const ExpertiseSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-700 font-medium text-sm mb-4">
-            Our Specializations
+            Nasze Specjalizacje
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-gradient">Expert Solutions</span> For Every Need
+            <span className="text-gradient">Eksperckie Rozwiązania</span> Na Każdą Potrzebę
           </h2>
           <p className="text-gray-600">
-            Discover our wide range of expertise areas that help businesses of all sizes achieve their marketing and branding goals.
+            Odkryj nasz szeroki zakres obszarów specjalizacji, które pomagają firmom każdej wielkości osiągnąć ich cele marketingowe i brandingowe.
           </p>
         </div>
         
@@ -146,7 +146,7 @@ const ExpertiseSection = () => {
                     onClick={() => toggleExpand(area.id)}
                     className="flex items-center text-blue-600 font-medium hover:text-purple-600 transition-colors"
                   >
-                    {isExpanded ? "View Less" : "Learn More"}
+                    {isExpanded ? "Pokaż mniej" : "Dowiedz się więcej"}
                     {isExpanded 
                       ? <ChevronDown size={16} className="ml-1" /> 
                       : <ChevronRight size={16} className="ml-1" />
@@ -155,7 +155,7 @@ const ExpertiseSection = () => {
                   
                   {isExpanded && (
                     <div className="mt-6 pt-6 border-t border-gray-100">
-                      <h4 className="font-medium mb-4">Our {area.title} include:</h4>
+                      <h4 className="font-medium mb-4">Nasze {area.title} obejmują:</h4>
                       <ul className="space-y-3">
                         {area.details.map((detail, index) => (
                           <li key={index} className="flex items-start">
@@ -172,7 +172,7 @@ const ExpertiseSection = () => {
                           href="#contact" 
                           className="inline-block rounded-full px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:shadow-lg transition-all"
                         >
-                          Discuss Your Project
+                          Omów swój projekt
                         </a>
                       </div>
                     </div>

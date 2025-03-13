@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="text-xl font-bold text-gradient">Poiotes</span>
             </Link>
             <p className="text-gray-600 mb-6">
-              Elevating brands through premium promotional products and print solutions.
+              Podnoszenie wartości marek poprzez premium produkty promocyjne i rozwiązania druku.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center group">
@@ -35,12 +35,19 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Szybkie linki</h3>
             <ul className="space-y-3">
-              {['Products', 'About Us', 'Expertise', 'Case Studies', 'Testimonials', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-gray-600 hover:text-blue-600 transition-colors">
-                    {item}
+              {[
+                { name: 'Produkty', id: 'products' },
+                { name: 'O nas', id: 'about' },
+                { name: 'Specjalizacje', id: 'expertise' },
+                { name: 'Case studies', id: 'case-studies' },
+                { name: 'Referencje', id: 'testimonials' },
+                { name: 'Kontakt', id: 'contact' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <a href={`#${item.id}`} className="text-gray-600 hover:text-blue-600 transition-colors">
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -48,9 +55,9 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Products</h3>
+            <h3 className="text-lg font-semibold mb-4">Produkty</h3>
             <ul className="space-y-3">
-              {['Beach Chairs', 'Advertising Lanyards', 'Multi-functional Bandanas', 'Event Wristbands', 'Business Cards', 'Catalogs', 'Flyers'].map((item) => (
+              {['Leżaki plażowe', 'Smycze reklamowe', 'Wielofunkcyjne chusty', 'Opaski eventowe', 'Wizytówki', 'Katalogi', 'Ulotki'].map((item) => (
                 <li key={item}>
                   <a href="#products" className="text-gray-600 hover:text-blue-600 transition-colors">
                     {item}
@@ -61,19 +68,19 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="text-blue-600 mt-1 flex-shrink-0" />
-                <span className="text-gray-600">123 Promotion Avenue, Marketing District, NY 10001</span>
+                <span className="text-gray-600">ul. Reklamowa 123, Dzielnica Marketingowa, 00-001 Warszawa</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-blue-600 flex-shrink-0" />
-                <span className="text-gray-600">+1 (555) 123-4567</span>
+                <span className="text-gray-600">+48 123 456 789</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-blue-600 flex-shrink-0" />
-                <span className="text-gray-600">contact@poiotes.com</span>
+                <span className="text-gray-600">kontakt@poiotes.pl</span>
               </li>
             </ul>
           </div>
@@ -81,12 +88,12 @@ const Footer = () => {
         
         <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-500 mb-4 md:mb-0">
-            © {new Date().getFullYear()} Poiotes. All rights reserved.
+            © {new Date().getFullYear()} Poiotes. Wszelkie prawa zastrzeżone.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Privacy Policy</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Terms of Service</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Cookie Policy</a>
+            <a href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Polityka prywatności</a>
+            <a href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Warunki korzystania</a>
+            <a href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Polityka cookies</a>
           </div>
         </div>
       </div>

@@ -52,13 +52,13 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-700 font-medium text-sm mb-4">
-            Get In Touch
+            Kontakt
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-gradient">Contact Us</span> For Your Project
+            <span className="text-gradient">Skontaktuj się</span> W Sprawie Twojego Projektu
           </h2>
           <p className="text-gray-600">
-            Ready to elevate your brand with premium promotional products? Fill out the form below and our team will get back to you shortly.
+            Gotowy, aby wyróżnić swoją markę za pomocą premium produktów promocyjnych? Wypełnij poniższy formularz, a nasz zespół wkrótce się z Tobą skontaktuje.
           </p>
         </div>
         
@@ -71,9 +71,9 @@ const ContactSection = () => {
                 <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-6">
                   <Check size={32} className="text-green-600" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-2 text-center">Message Sent Successfully!</h3>
+                <h3 className="text-2xl font-semibold mb-2 text-center">Wiadomość wysłana pomyślnie!</h3>
                 <p className="text-gray-600 text-center max-w-md">
-                  Thank you for contacting Poiotes. Our team will review your message and get back to you shortly.
+                  Dziękujemy za kontakt z Poiotes. Nasz zespół przeanalizuje Twoją wiadomość i wkrótce się z Tobą skontaktuje.
                 </p>
               </div>
             ) : (
@@ -81,7 +81,7 @@ const ContactSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Full Name*
+                      Imię i nazwisko*
                     </label>
                     <input
                       type="text"
@@ -91,13 +91,13 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
-                      placeholder="John Doe"
+                      placeholder="Jan Kowalski"
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Email Address*
+                      Adres e-mail*
                     </label>
                     <input
                       type="email"
@@ -107,13 +107,13 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
-                      placeholder="john@example.com"
+                      placeholder="jan@przyklad.pl"
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Phone Number
+                      Numer telefonu
                     </label>
                     <input
                       type="tel"
@@ -122,13 +122,13 @@ const ContactSection = () => {
                       value={formState.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+48 123 456 789"
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                      Company Name
+                      Nazwa firmy
                     </label>
                     <input
                       type="text"
@@ -137,14 +137,14 @@ const ContactSection = () => {
                       value={formState.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
-                      placeholder="Your Company"
+                      placeholder="Twoja Firma"
                     />
                   </div>
                 </div>
                 
                 <div className="mb-6">
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Message*
+                    Twoja wiadomość*
                   </label>
                   <textarea
                     id="message"
@@ -154,7 +154,7 @@ const ContactSection = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all resize-none"
-                    placeholder="Tell us about your project and requirements..."
+                    placeholder="Opowiedz nam o swoim projekcie i wymaganiach..."
                   ></textarea>
                 </div>
                 
@@ -169,11 +169,11 @@ const ContactSection = () => {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      Processing...
+                      Przetwarzanie...
                     </span>
                   ) : (
                     <span className="flex items-center">
-                      Send Message
+                      Wyślij wiadomość
                       <Send size={16} className="ml-2" />
                     </span>
                   )}
@@ -184,7 +184,7 @@ const ContactSection = () => {
           
           <div>
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
-              <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+              <h3 className="text-xl font-semibold mb-6">Informacje kontaktowe</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -192,11 +192,11 @@ const ContactSection = () => {
                     <MapPin className="text-blue-600" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">Our Office</h4>
+                    <h4 className="font-medium mb-1">Nasze biuro</h4>
                     <p className="text-gray-600">
-                      123 Promotion Avenue<br />
-                      Marketing District<br />
-                      New York, NY 10001
+                      ul. Reklamowa 123<br />
+                      Dzielnica Marketingowa<br />
+                      00-001 Warszawa
                     </p>
                   </div>
                 </div>
@@ -206,9 +206,9 @@ const ContactSection = () => {
                     <Mail className="text-purple-600" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">Email Us</h4>
-                    <p className="text-gray-600">info@poiotes.com</p>
-                    <p className="text-gray-600">sales@poiotes.com</p>
+                    <h4 className="font-medium mb-1">Email</h4>
+                    <p className="text-gray-600">info@poiotes.pl</p>
+                    <p className="text-gray-600">sprzedaz@poiotes.pl</p>
                   </div>
                 </div>
                 
@@ -217,42 +217,42 @@ const ContactSection = () => {
                     <Phone className="text-pink-600" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">Call Us</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">+1 (555) 987-6543</p>
+                    <h4 className="font-medium mb-1">Telefon</h4>
+                    <p className="text-gray-600">+48 123 456 789</p>
+                    <p className="text-gray-600">+48 987 654 321</p>
                   </div>
                 </div>
               </div>
             </div>
             
             <div className="bg-white rounded-xl shadow-md p-8">
-              <h3 className="text-xl font-semibold mb-6">Business Hours</h3>
+              <h3 className="text-xl font-semibold mb-6">Godziny pracy</h3>
               
               <ul className="space-y-4">
                 <li className="flex justify-between">
-                  <span className="text-gray-600">Monday - Friday</span>
-                  <span className="font-medium">9:00 AM - 6:00 PM</span>
+                  <span className="text-gray-600">Poniedziałek - Piątek</span>
+                  <span className="font-medium">9:00 - 18:00</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-gray-600">Saturday</span>
-                  <span className="font-medium">10:00 AM - 4:00 PM</span>
+                  <span className="text-gray-600">Sobota</span>
+                  <span className="font-medium">10:00 - 16:00</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-gray-600">Sunday</span>
-                  <span className="font-medium">Closed</span>
+                  <span className="text-gray-600">Niedziela</span>
+                  <span className="font-medium">Zamknięte</span>
                 </li>
               </ul>
               
               <div className="mt-6 pt-6 border-t border-gray-100">
-                <h4 className="font-medium mb-2">Need urgent assistance?</h4>
+                <h4 className="font-medium mb-2">Potrzebujesz pilnej pomocy?</h4>
                 <p className="text-gray-600 mb-4">
-                  For urgent inquiries outside business hours, please email us at support@poiotes.com
+                  W przypadku pilnych zapytań poza godzinami pracy, prosimy o kontakt mailowy na wsparcie@poiotes.pl
                 </p>
                 <a 
-                  href="mailto:support@poiotes.com" 
+                  href="mailto:wsparcie@poiotes.pl" 
                   className="inline-block text-blue-600 font-medium hover:text-purple-600 transition-colors"
                 >
-                  Send an email →
+                  Wyślij email →
                 </a>
               </div>
             </div>

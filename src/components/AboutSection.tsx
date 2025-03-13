@@ -4,12 +4,12 @@ import { Check } from 'lucide-react';
 
 const AboutSection = () => {
   const expertise = [
-    "Premium promotional product design and production",
-    "Custom print solutions for businesses of all sizes",
-    "Brand-consistent advertising materials",
-    "High-quality event essentials",
-    "Eco-friendly and sustainable product options",
-    "Comprehensive branding solutions"
+    "Projektowanie i produkcja premium produktów promocyjnych",
+    "Niestandardowe rozwiązania druku dla firm każdej wielkości",
+    "Materiały reklamowe zgodne z identyfikacją marki",
+    "Wysokiej jakości artykuły eventowe",
+    "Ekologiczne i zrównoważone opcje produktów",
+    "Kompleksowe rozwiązania brandingowe"
   ];
 
   return (
@@ -24,8 +24,8 @@ const AboutSection = () => {
               <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl border-2 border-blue-200"></div>
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Poiotes team at work" 
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Zespół Poiotes przy pracy" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -34,23 +34,23 @@ const AboutSection = () => {
           
           <div>
             <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-700 font-medium text-sm mb-4">
-              About Poiotes
+              O Poiotes
             </span>
             
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Your Partner For <span className="text-gradient">Premium Advertising</span> Solutions
+              Twój Partner Dla <span className="text-gradient">Premium Rozwiązań</span> Reklamowych
             </h2>
             
             <p className="text-gray-600 mb-6">
-              Poiotes was founded with a clear mission: to provide businesses with high-quality promotional products that truly represent their brand values. With over 15 years of experience in the industry, we've helped hundreds of companies enhance their marketing efforts through premium advertising materials.
+              Poiotes zostało założone z jasną misją: dostarczania firmom wysokiej jakości produktów promocyjnych, które naprawdę reprezentują wartości ich marki. Z ponad 15-letnim doświadczeniem w branży, pomogliśmy setkom firm zwiększyć skuteczność ich działań marketingowych dzięki premium materiałom reklamowym.
             </p>
             
             <p className="text-gray-600 mb-8">
-              Our dedicated team of designers and production specialists work closely with each client to create custom solutions that make a lasting impression. We believe that every touchpoint with your audience matters, which is why we focus on delivering products that are not just visually appealing but also functional and memorable.
+              Nasz oddany zespół projektantów i specjalistów produkcji ściśle współpracuje z każdym klientem, aby tworzyć niestandardowe rozwiązania, które wywierają trwałe wrażenie. Wierzymy, że każdy punkt kontaktu z odbiorcą ma znaczenie, dlatego skupiamy się na dostarczaniu produktów, które są nie tylko wizualnie atrakcyjne, ale także funkcjonalne i godne zapamiętania.
             </p>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4">Our Expertise</h3>
+              <h3 className="text-xl font-semibold mb-4">Nasza Specjalizacja</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6">
                 {expertise.map((item, index) => (
                   <li key={index} className="flex items-start">
@@ -67,7 +67,7 @@ const AboutSection = () => {
               href="#expertise" 
               className="inline-block rounded-full px-8 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:shadow-lg transition-all"
             >
-              Learn More About Us
+              Dowiedz się więcej o nas
             </a>
           </div>
         </div>

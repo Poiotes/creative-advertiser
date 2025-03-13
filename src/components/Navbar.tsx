@@ -44,17 +44,22 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-8">
-            {['Products', 'About', 'Expertise', 'Contact'].map((item) => (
+            {[
+              { name: 'Produkty', id: 'products' },
+              { name: 'O nas', id: 'about' },
+              { name: 'Specjalizacje', id: 'expertise' },
+              { name: 'Kontakt', id: 'contact' }
+            ].map((item) => (
               <a 
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.name}
+                href={`#${item.id}`}
                 className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
               >
-                {item}
+                {item.name}
               </a>
             ))}
             <button className="rounded-full px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:shadow-lg transition-all">
-              Get Quote
+              Zapytaj o wycenę
             </button>
           </nav>
 
@@ -73,18 +78,23 @@ const Navbar = () => {
         )}
       >
         <nav className="flex flex-col space-y-4 px-4">
-          {['Products', 'About', 'Expertise', 'Contact'].map((item) => (
+          {[
+            { name: 'Produkty', id: 'products' },
+            { name: 'O nas', id: 'about' },
+            { name: 'Specjalizacje', id: 'expertise' },
+            { name: 'Kontakt', id: 'contact' }
+          ].map((item) => (
             <a 
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.name}
+              href={`#${item.id}`}
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
               onClick={closeMenu}
             >
-              {item}
+              {item.name}
             </a>
           ))}
           <button className="rounded-full px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:shadow-lg transition-all mt-2">
-            Get Quote
+            Zapytaj o wycenę
           </button>
         </nav>
       </div>
