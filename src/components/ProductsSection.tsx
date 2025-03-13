@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ChevronRight, Award, Truck, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Kategorie produktów i elementy
 const categories = [
@@ -16,42 +17,78 @@ const products = [
     name: 'Premium Leżaki Plażowe',
     category: 'promo',
     description: 'Wygodne, brandowane leżaki plażowe, które przyciągają uwagę na imprezach plenerowych.',
-    image: 'https://images.unsplash.com/photo-1589686000081-11d77fc0a0e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://i.imgur.com/7MSnWQe.png',
+    prices: [
+      { quantity: '1-10', price: '120 zł' },
+      { quantity: '11-50', price: '105 zł' },
+      { quantity: '51+', price: '95 zł' },
+    ],
+    details: 'Nasze premium leżaki plażowe to idealne rozwiązanie reklamowe na każde wydarzenie plenerowe. Wykonane z trwałego drewna bukowego i wysokiej jakości materiału, który można w pełni personalizować. Dostępne w różnych kolorach z możliwością nadruku logo, hasła lub dowolnej grafiki metodą sublimacji, która gwarantuje trwałość i intensywność kolorów.'
   },
   {
     id: 2,
     name: 'Personalizowane Smycze',
     category: 'promo',
     description: 'Wysokiej jakości smycze z logo Twojej firmy, idealne na konferencje i do biura.',
-    image: 'https://images.unsplash.com/photo-1586769852044-692d6e3703f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://i.imgur.com/UZiXrh3.png',
+    prices: [
+      { quantity: '1-50', price: '8 zł' },
+      { quantity: '51-200', price: '6 zł' },
+      { quantity: '201+', price: '4.50 zł' },
+    ],
+    details: 'Nasze smycze reklamowe to doskonały sposób na promocję marki podczas konferencji, targów czy w codziennym użytku biurowym. Oferujemy różne szerokości taśmy (10mm, 15mm i 20mm), szeroki wybór kolorów i zapięć. Możliwość nadruku pełnokolorowego z obu stron, z dodatkowymi elementami bezpieczeństwa jak zrywka czy plastikowa klamra.'
   },
   {
     id: 3,
     name: 'Wielofunkcyjne Chusty',
     category: 'promo',
     description: 'Wszechstronne brandowane chusty, które można nosić na wiele sposobów.',
-    image: 'https://images.unsplash.com/photo-1588625500633-a0cd518f0f60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://i.imgur.com/YfFUDT3.png',
+    prices: [
+      { quantity: '1-30', price: '15 zł' },
+      { quantity: '31-100', price: '12 zł' },
+      { quantity: '101+', price: '9.50 zł' },
+    ],
+    details: 'Wielofunkcyjne chusty reklamowe to innowacyjny produkt promocyjny, który można nosić na kilkanaście różnych sposobów: jako opaska, szalik, maska, czapka i wiele innych. Wykonane z elastycznego, bezszwowego micropoliestru, który doskonale odprowadza wilgoć i szybko schnie. Nadruk sublimacyjny na całej powierzchni zapewnia nieograniczone możliwości projektowe.'
   },
   {
     id: 4,
     name: 'Opaski Eventowe',
     category: 'event',
     description: 'Trwałe, wodoodporne opaski na imprezy, zapewniające dostęp i widoczność marki.',
-    image: 'https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://i.imgur.com/XEQwNQK.png',
+    prices: [
+      { quantity: '1-100', price: '3 zł' },
+      { quantity: '101-500', price: '2 zł' },
+      { quantity: '501+', price: '1.50 zł' },
+    ],
+    details: 'Opaski eventowe to praktyczne rozwiązanie do kontroli dostępu podczas festiwali, konferencji i innych wydarzeń. Wykonane z wytrzymałego i wodoodpornego materiału Tyvek lub silikonowe dla wielokrotnego użytku. Dostępne w różnych kolorach z możliwością nadruku logo, tła graficznego lub numeracji seryjnej. Zabezpieczone samoprzylepnym zamknięciem lub specjalną plastikową zapinką.'
   },
   {
     id: 5,
     name: 'Premium Wizytówki',
     category: 'print',
     description: 'Wyróżnij się dzięki naszym wizytówkom premium z wysokiej jakości wykończeniem.',
-    image: 'https://images.unsplash.com/photo-1572048572872-2394404cf1f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://i.imgur.com/L91zTwB.png',
+    prices: [
+      { quantity: '100', price: '80 zł' },
+      { quantity: '250', price: '150 zł' },
+      { quantity: '500', price: '250 zł' },
+    ],
+    details: 'Nasze premium wizytówki to więcej niż kontakt - to pierwsze wrażenie Twojej marki. Oferujemy druk na papierach wysokiej gramaturze (300-350g), z możliwością wyboru wykończeń takich jak hot-stamping, lakier wybiórczy UV, soft-touch czy zaokrąglone rogi. Dostępne również w wersjach ekologicznych na papierze z recyklingu.'
   },
   {
     id: 6,
     name: 'Personalizowane Katalogi',
     category: 'print',
     description: 'Pięknie zaprojektowane katalogi, które elegancko prezentują Twoje produkty.',
-    image: 'https://images.unsplash.com/photo-1520807940693-216ccf06d401?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://i.imgur.com/MVpEhRF.png',
+    prices: [
+      { quantity: '50', price: '15 zł/szt.' },
+      { quantity: '100', price: '12 zł/szt.' },
+      { quantity: '200+', price: '9 zł/szt.' },
+    ],
+    details: 'Katalogi produktowe to kompleksowa prezentacja Twojej oferty, która buduje profesjonalny wizerunek firmy. Drukowane na papierze kredowym błysk lub mat o gramaturze 130-170g z okładką na grubszym papierze (250-300g). Dostępne w różnych formatach (A4, A5, niestandardowe), z różnymi rodzajami oprawy: zeszytowa, klejona czy spiralna. Możliwość dodania specjalnych uszlachetnień jak folie, lakiery i tłoczenia.'
   },
 ];
 
@@ -101,24 +138,25 @@ const ProductsSection = () => {
           {filteredProducts.map((product) => (
             <div 
               key={product.id} 
-              className="bg-white rounded-xl overflow-hidden shadow-md hover-effect group"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover-effect group relative"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[4/3] overflow-visible relative">
                 <img 
                   src={product.image} 
                   alt={product.name} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain absolute -top-6 scale-[1.15] transition-transform duration-500 group-hover:scale-[1.2]"
                 />
+                <div className="w-full h-full bg-gradient-to-b from-transparent to-white/30 absolute bottom-0"></div>
               </div>
-              <div className="p-6">
+              <div className="p-6 pt-16 relative z-10">
                 <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                 <p className="text-gray-600 mb-4">{product.description}</p>
-                <a 
-                  href="#contact" 
+                <Link 
+                  to={`/product/${product.id}`}
                   className="inline-flex items-center text-blue-600 font-medium hover:text-purple-600 transition-colors"
                 >
-                  Zapytaj o wycenę <ChevronRight size={16} className="ml-1" />
-                </a>
+                  Zobacz szczegóły <ChevronRight size={16} className="ml-1" />
+                </Link>
               </div>
             </div>
           ))}
