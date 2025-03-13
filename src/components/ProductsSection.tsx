@@ -11,7 +11,7 @@ const categories = [
   { id: 'event', name: 'Artykuły Eventowe' },
 ];
 
-const products = [
+export const products = [
   {
     id: 1,
     name: 'Premium Leżaki Plażowe',
