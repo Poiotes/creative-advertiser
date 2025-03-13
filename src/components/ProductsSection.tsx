@@ -17,7 +17,7 @@ export const products = [
     name: 'Premium Leżaki Plażowe',
     category: 'promo',
     description: 'Wygodne, brandowane leżaki plażowe, które przyciągają uwagę na imprezach plenerowych.',
-    image: 'https://i.imgur.com/7MSnWQe.png',
+    image: 'https://images.unsplash.com/photo-1531171111196-9ad9ff46757b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80',
     prices: [
       { quantity: '1-10', price: '120 zł' },
       { quantity: '11-50', price: '105 zł' },
@@ -30,7 +30,7 @@ export const products = [
     name: 'Personalizowane Smycze',
     category: 'promo',
     description: 'Wysokiej jakości smycze z logo Twojej firmy, idealne na konferencje i do biura.',
-    image: 'https://i.imgur.com/UZiXrh3.png',
+    image: 'https://images.unsplash.com/photo-1563282410-c181bc24dd5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80',
     prices: [
       { quantity: '1-50', price: '8 zł' },
       { quantity: '51-200', price: '6 zł' },
@@ -43,7 +43,7 @@ export const products = [
     name: 'Wielofunkcyjne Chusty',
     category: 'promo',
     description: 'Wszechstronne brandowane chusty, które można nosić na wiele sposobów.',
-    image: 'https://i.imgur.com/YfFUDT3.png',
+    image: 'https://images.unsplash.com/photo-1613235577937-9ac3eed992fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80',
     prices: [
       { quantity: '1-30', price: '15 zł' },
       { quantity: '31-100', price: '12 zł' },
@@ -56,7 +56,7 @@ export const products = [
     name: 'Opaski Eventowe',
     category: 'event',
     description: 'Trwałe, wodoodporne opaski na imprezy, zapewniające dostęp i widoczność marki.',
-    image: 'https://i.imgur.com/XEQwNQK.png',
+    image: 'https://images.unsplash.com/photo-1560421741-50d22d140a98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80',
     prices: [
       { quantity: '1-100', price: '3 zł' },
       { quantity: '101-500', price: '2 zł' },
@@ -69,7 +69,7 @@ export const products = [
     name: 'Premium Wizytówki',
     category: 'print',
     description: 'Wyróżnij się dzięki naszym wizytówkom premium z wysokiej jakości wykończeniem.',
-    image: 'https://i.imgur.com/L91zTwB.png',
+    image: 'https://images.unsplash.com/photo-1616628188859-7a11abb6fcc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80',
     prices: [
       { quantity: '100', price: '80 zł' },
       { quantity: '250', price: '150 zł' },
@@ -82,7 +82,7 @@ export const products = [
     name: 'Personalizowane Katalogi',
     category: 'print',
     description: 'Pięknie zaprojektowane katalogi, które elegancko prezentują Twoje produkty.',
-    image: 'https://i.imgur.com/MVpEhRF.png',
+    image: 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80',
     prices: [
       { quantity: '50', price: '15 zł/szt.' },
       { quantity: '100', price: '12 zł/szt.' },
