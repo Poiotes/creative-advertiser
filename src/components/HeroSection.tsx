@@ -56,18 +56,13 @@ const HeroSection = () => {
             <div className="relative aspect-[4/3] max-w-md mx-auto lg:max-w-none">
               <div className="absolute inset-0 flex items-center justify-center opacity-0 animate-fade-in-delay-2">
                 <div className="w-full h-full relative">
-                  {/* Main image */}
+                  {/* Main image - using the new uploaded image */}
                   <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl animate-float">
-                    <div className="w-full h-full bg-gradient-to-r from-blue-50 to-purple-50 p-4">
-                      <div className="w-full h-full rounded-xl overflow-hidden relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80 mix-blend-multiply"></div>
-                        <img 
-                          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                          alt="Produkty promocyjne" 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
+                    <img 
+                      src="/lovable-uploads/2219ad88-c697-4df9-8f41-987b27fd3cd4.png" 
+                      alt="Poiotes Logo" 
+                      className="w-full h-full object-contain p-8"
+                    />
                   </div>
                   
                   {/* Floating elements */}

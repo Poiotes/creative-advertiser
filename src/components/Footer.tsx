@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <img src="/lovable-uploads/b01784e3-5558-40ec-91c9-0230f0e02843.png" alt="Poiotes Logo" className="h-12" />
+              <img src="/lovable-uploads/b01784e3-5558-40ec-91c9-0230f0e02843.png" alt="Poiotes Logo" className="h-16 w-auto" />
             </Link>
             <p className="text-gray-600 mb-6">
               Podnoszenie wartości marek poprzez premium produkty promocyjne i rozwiązania druku.
