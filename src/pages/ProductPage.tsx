@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Share, Mail, Download } from 'lucide-react';
+import { ArrowLeft, Share, Mail, Download, Check, PenTool, Zap, Award, Shield, RefreshCw } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -16,6 +16,17 @@ const ProductPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    // Update page title and meta description for SEO
+    if (product) {
+      document.title = `${product.name} | Poiotes - Wysokiej jakości materiały promocyjne`;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', `${product.name} - ${product.description}. Najwyższa jakość, szybka realizacja, konkurencyjne ceny.`);
+      }
+    }
+  }, [product]);
 
   if (!product) {
     return (
@@ -87,6 +98,28 @@ const ProductPage = () => {
                 {categories.find(c => c.id === product.category)?.name}
               </span>
               <h1 className="text-3xl md:text-4xl font-bold mb-4">{product.name}</h1>
+              
+              {/* Schema structured data for SEO */}
+              <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org/",
+                  "@type": "Product",
+                  "name": product.name,
+                  "description": product.description,
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Poiotes"
+                  },
+                  "offers": {
+                    "@type": "AggregateOffer",
+                    "priceCurrency": "PLN",
+                    "lowPrice": product.prices[0].price.replace(' zł', '').replace(',', '.'),
+                    "highPrice": product.prices[product.prices.length-1].price.replace(' zł', '').replace(',', '.'),
+                    "offerCount": product.prices.length
+                  }
+                })
+              }} />
+              
               <p className="text-gray-600 mb-8">{product.description}</p>
 
               <div className="flex flex-wrap gap-3 mb-8">
@@ -144,6 +177,134 @@ const ProductPage = () => {
                   <li>Przyspieszony: 7-9 dni roboczych</li>
                   <li>Ekspresowy: 3-5 dni roboczych</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+          
+          {/* NEW: Benefits Section */}
+          <div className="bg-gray-50 rounded-xl p-8 shadow-sm mb-12">
+            <h2 className="text-2xl font-semibold mb-6 text-center">Dlaczego warto wybrać nasze {product.name}?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                  <Award className="text-blue-600" />
+                </div>
+                <h3 className="font-semibold mb-2">Najwyższa jakość</h3>
+                <p className="text-gray-600">Używamy tylko najlepszych materiałów i najnowszych technologii produkcji.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                  <PenTool className="text-blue-600" />
+                </div>
+                <h3 className="font-semibold mb-2">Personalizacja</h3>
+                <p className="text-gray-600">Pełne możliwości dostosowania projektu do Twoich potrzeb i wymagań marki.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                  <Zap className="text-blue-600" />
+                </div>
+                <h3 className="font-semibold mb-2">Szybka realizacja</h3>
+                <p className="text-gray-600">Sprawny proces od projektu do realizacji, z opcją ekspresowej dostawy.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* NEW: Features Section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold mb-8 text-center">Kluczowe cechy produktu</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 mt-1">
+                  <Check className="text-green-500" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Trwałość i wytrzymałość</h3>
+                  <p className="text-gray-600">Nasze {product.name} są zaprojektowane z myślą o długotrwałym użytkowaniu, nawet w niesprzyjających warunkach.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 mt-1">
+                  <Check className="text-green-500" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Profesjonalny wygląd</h3>
+                  <p className="text-gray-600">Eleganckie wykończenie i dbałość o detale sprawiają, że produkt doskonale reprezentuje Twoją markę.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 mt-1">
+                  <Check className="text-green-500" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Zgodność z normami</h3>
+                  <p className="text-gray-600">Wszystkie materiały posiadają niezbędne certyfikaty i spełniają europejskie standardy jakości.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 mt-1">
+                  <Check className="text-green-500" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Konkurencyjna cena</h3>
+                  <p className="text-gray-600">Oferujemy najlepszy stosunek jakości do ceny na rynku, z dodatkowymi rabatami przy większych zamówieniach.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* NEW: Process Section */}
+          <div className="bg-white rounded-xl p-8 shadow-md mb-12">
+            <h2 className="text-2xl font-semibold mb-6 text-center">Jak wygląda proces współpracy?</h2>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center text-center gap-4">
+              <div className="flex flex-col items-center max-w-[200px] mx-auto">
+                <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                  <span className="font-bold text-blue-600">01</span>
+                </div>
+                <h3 className="font-medium mb-2">Konsultacja</h3>
+                <p className="text-sm text-gray-600">Ustalamy szczegóły projektu i potrzeby</p>
+              </div>
+              <div className="hidden md:block w-12 h-0.5 bg-gray-200"></div>
+              <div className="flex flex-col items-center max-w-[200px] mx-auto">
+                <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                  <span className="font-bold text-blue-600">02</span>
+                </div>
+                <h3 className="font-medium mb-2">Projekt</h3>
+                <p className="text-sm text-gray-600">Przygotowanie wizualizacji i akceptacja</p>
+              </div>
+              <div className="hidden md:block w-12 h-0.5 bg-gray-200"></div>
+              <div className="flex flex-col items-center max-w-[200px] mx-auto">
+                <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                  <span className="font-bold text-blue-600">03</span>
+                </div>
+                <h3 className="font-medium mb-2">Produkcja</h3>
+                <p className="text-sm text-gray-600">Realizacja zamówienia z kontrolą jakości</p>
+              </div>
+              <div className="hidden md:block w-12 h-0.5 bg-gray-200"></div>
+              <div className="flex flex-col items-center max-w-[200px] mx-auto">
+                <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                  <span className="font-bold text-blue-600">04</span>
+                </div>
+                <h3 className="font-medium mb-2">Dostawa</h3>
+                <p className="text-sm text-gray-600">Bezpieczne pakowanie i szybka wysyłka</p>
+              </div>
+            </div>
+          </div>
+
+          {/* NEW: FAQ Section */}
+          <div className="bg-gray-50 rounded-xl p-8 mb-12">
+            <h2 className="text-2xl font-semibold mb-6 text-center">Często zadawane pytania</h2>
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-semibold mb-2">Jaki jest minimalny nakład zamówienia?</h3>
+                <p className="text-gray-600">Minimalny nakład zależy od rodzaju produktu i wybranej metody personalizacji. W przypadku {product.name} minimalne zamówienie to zazwyczaj 50 sztuk.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-semibold mb-2">Czy mogę otrzymać próbkę przed złożeniem większego zamówienia?</h3>
+                <p className="text-gray-600">Tak, oferujemy możliwość zamówienia pojedynczych próbek dla klientów biznesowych, aby mogli ocenić jakość przed złożeniem większego zamówienia.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-semibold mb-2">Jakie formaty plików są akceptowane dla projektów graficznych?</h3>
+                <p className="text-gray-600">Akceptujemy pliki w formatach wektorowych (AI, EPS, PDF) oraz rastrowych o wysokiej rozdzielczości (TIFF, PSD, PNG z min. 300 dpi).</p>
               </div>
             </div>
           </div>

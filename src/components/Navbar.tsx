@@ -78,7 +78,7 @@ const Navbar = () => {
             <span className="text-xl font-bold text-gradient">Poiotes</span>
           </Link>
 
-          {/* Desktop Menu with Mega Menu */}
+          {/* Desktop Menu with Mega Menu - Fixed width */}
           <div className="hidden md:flex items-center space-x-6">
             <NavigationMenu>
               <NavigationMenuList>
@@ -86,10 +86,10 @@ const Navbar = () => {
                   <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent font-medium text-gray-700 hover:text-blue-600">
                     Produkty
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-white rounded-md shadow-lg p-4 w-[500px]">
-                    <div className="grid grid-cols-3 gap-4 p-4">
+                  <NavigationMenuContent className="bg-white rounded-md shadow-lg p-4 w-[800px] max-w-[90vw] left-0">
+                    <div className="grid grid-cols-3 gap-6 p-4">
                       {productCategories.map((category) => (
-                        <div key={category.title} className="space-y-2">
+                        <div key={category.title} className="space-y-3">
                           <h3 className="font-bold text-sm text-gray-500">{category.title}</h3>
                           <ul className="space-y-2">
                             {category.items.map((item) => (
