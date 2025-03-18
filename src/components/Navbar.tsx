@@ -4,13 +4,11 @@ import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown, BookOpen } from "lucide-react";
 import { Link } from 'react-router-dom';
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 // Product categories for mega menu
 const productCategories = [
@@ -78,45 +76,44 @@ const Navbar = () => {
             <span className="text-xl font-bold text-gradient">Poiotes</span>
           </Link>
 
-          {/* Desktop Menu with Mega Menu */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent font-medium text-gray-700 hover:text-blue-600">
-                    Produkty
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="w-[800px] max-w-[95vw]">
-                    <div className="grid grid-cols-3 gap-6 p-6 bg-white rounded-md shadow-lg">
-                      {productCategories.map((category) => (
-                        <div key={category.title} className="space-y-3">
-                          <h3 className="font-bold text-sm text-gray-500">{category.title}</h3>
-                          <ul className="space-y-2">
-                            {category.items.map((item) => (
-                              <li key={item.name}>
-                                <Link
-                                  to={item.href}
-                                  className="block text-sm text-gray-700 hover:text-blue-600 transition-colors"
-                                  onClick={closeMenu}
-                                >
-                                  {item.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+            {/* Dropdown Menu for Products */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                  <span>Produkty</span>
+                  <ChevronDown size={16} />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-[650px] p-4 bg-white rounded-md shadow-lg" align="start" sideOffset={20}>
+                <div className="grid grid-cols-3 gap-6">
+                  {productCategories.map((category) => (
+                    <div key={category.title} className="space-y-3">
+                      <h3 className="font-bold text-sm text-gray-500">{category.title}</h3>
+                      <ul className="space-y-2">
+                        {category.items.map((item) => (
+                          <li key={item.name}>
+                            <Link
+                              to={item.href}
+                              className="block text-sm text-gray-700 hover:text-blue-600 transition-colors"
+                              onClick={closeMenu}
+                            >
+                              {item.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link to="/blog" className="flex items-center gap-1.5 text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2">
-                    <BookOpen size={18} />
-                    <span>Blog</span>
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+                  ))}
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
+            <Link to="/blog" className="flex items-center gap-1.5 text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <BookOpen size={18} />
+              <span>Blog</span>
+            </Link>
             
             {[
               { name: 'O nas', id: 'about' },
