@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, BookOpen } from "lucide-react";
 import { Link } from 'react-router-dom';
 import {
   NavigationMenu,
@@ -78,7 +78,7 @@ const Navbar = () => {
             <span className="text-xl font-bold text-gradient">Poiotes</span>
           </Link>
 
-          {/* Desktop Menu with Mega Menu - Fixed width */}
+          {/* Desktop Menu with Mega Menu */}
           <div className="hidden md:flex items-center space-x-6">
             <NavigationMenu>
               <NavigationMenuList>
@@ -86,8 +86,8 @@ const Navbar = () => {
                   <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent font-medium text-gray-700 hover:text-blue-600">
                     Produkty
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-white rounded-md shadow-lg p-4 w-[800px] max-w-[90vw] left-0">
-                    <div className="grid grid-cols-3 gap-6 p-4">
+                  <NavigationMenuContent className="w-[800px] max-w-[95vw]">
+                    <div className="grid grid-cols-3 gap-6 p-6 bg-white rounded-md shadow-lg">
                       {productCategories.map((category) => (
                         <div key={category.title} className="space-y-3">
                           <h3 className="font-bold text-sm text-gray-500">{category.title}</h3>
@@ -108,6 +108,12 @@ const Navbar = () => {
                       ))}
                     </div>
                   </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link to="/blog" className="flex items-center gap-1.5 text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2">
+                    <BookOpen size={18} />
+                    <span>Blog</span>
+                  </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -172,6 +178,16 @@ const Navbar = () => {
               ))}
             </div>
           </div>
+          
+          {/* Blog Link in Mobile */}
+          <Link 
+            to="/blog" 
+            className="flex items-center gap-1.5 text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
+            onClick={closeMenu}
+          >
+            <BookOpen size={18} />
+            <span>Blog</span>
+          </Link>
           
           {[
             { name: 'O nas', id: 'about' },
