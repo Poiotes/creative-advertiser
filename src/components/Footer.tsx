@@ -10,10 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="relative w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
-                <span className="font-bold text-white text-xl">P</span>
-              </div>
-              <span className="text-xl font-bold text-gradient">Poiotes</span>
+              <img src="/lovable-uploads/b01784e3-5558-40ec-91c9-0230f0e02843.png" alt="Poiotes Logo" className="h-12" />
             </Link>
             <p className="text-gray-600 mb-6">
               Podnoszenie wartości marek poprzez premium produkty promocyjne i rozwiązania druku.

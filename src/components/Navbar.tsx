@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
@@ -70,10 +69,7 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="relative w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
-              <span className="font-bold text-white text-xl">P</span>
-            </div>
-            <span className="text-xl font-bold text-gradient">Poiotes</span>
+            <img src="/lovable-uploads/b01784e3-5558-40ec-91c9-0230f0e02843.png" alt="Poiotes Logo" className="h-10" />
           </Link>
 
           {/* Desktop Menu */}
@@ -86,7 +82,11 @@ const Navbar = () => {
                   <ChevronDown size={16} />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-[650px] p-4 bg-white rounded-md shadow-lg" align="start" sideOffset={20}>
+              <DropdownMenuContent 
+                className="bg-white rounded-md shadow-lg p-6" 
+                sideOffset={20}
+                style={{ width: "700px", maxWidth: "95vw" }}
+              >
                 <div className="grid grid-cols-3 gap-6">
                   {productCategories.map((category) => (
                     <div key={category.title} className="space-y-3">
