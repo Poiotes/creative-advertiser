@@ -10,23 +10,23 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <img src="/lovable-uploads/b01784e3-5558-40ec-91c9-0230f0e02843.png" alt="Poiotes Logo" className="h-16 w-auto" />
+              <img src="/lovable-uploads/b01784e3-5558-40ec-91c9-0230f0e02843.png" alt="Poiotes Logo" className="h-20 w-auto" />
             </Link>
             <p className="text-gray-600 mb-6">
               Podnoszenie wartości marek poprzez premium produkty promocyjne i rozwiązania druku.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center group">
-                <Instagram size={18} className="text-gray-600 group-hover:text-blue-600 transition-colors" />
+              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
+                <Instagram size={18} className="text-gray-600" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center group">
-                <Twitter size={18} className="text-gray-600 group-hover:text-blue-600 transition-colors" />
+              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
+                <Twitter size={18} className="text-gray-600" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center group">
-                <Facebook size={18} className="text-gray-600 group-hover:text-blue-600 transition-colors" />
+              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
+                <Facebook size={18} className="text-gray-600" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center group">
-                <Linkedin size={18} className="text-gray-600 group-hover:text-blue-600 transition-colors" />
+              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
+                <Linkedin size={18} className="text-gray-600" />
               </a>
             </div>
           </div>
@@ -43,7 +43,7 @@ const Footer = () => {
                 { name: 'Kontakt', id: 'contact' }
               ].map((item) => (
                 <li key={item.name}>
-                  <a href={`#${item.id}`} className="text-gray-600 hover:text-blue-600 transition-colors">
+                  <a href={`#${item.id}`} className="text-gray-600 hover:text-blue-600">
                     {item.name}
                   </a>
                 </li>
@@ -56,7 +56,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {['Leżaki plażowe', 'Smycze reklamowe', 'Wielofunkcyjne chusty', 'Opaski eventowe', 'Wizytówki', 'Katalogi', 'Ulotki'].map((item) => (
                 <li key={item}>
-                  <a href="#products" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  <a href="#products" className="text-gray-600 hover:text-blue-600">
                     {item}
                   </a>
                 </li>
@@ -68,15 +68,15 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <MapPin size={20} className="text-blue-600 mt-1 flex-shrink-0" />
-                <span className="text-gray-600">ul. Reklamowa 123, Dzielnica Marketingowa, 00-001 Warszawa</span>
+                <MapPin size={20} className="text-blue-600 mt-1" />
+                <span className="text-gray-600">ul. Reklamowa 123, Warszawa</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone size={20} className="text-blue-600 flex-shrink-0" />
+                <Phone size={20} className="text-blue-600" />
                 <span className="text-gray-600">+48 123 456 789</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail size={20} className="text-blue-600 flex-shrink-0" />
+                <Mail size={20} className="text-blue-600" />
                 <span className="text-gray-600">kontakt@poiotes.pl</span>
               </li>
             </ul>
@@ -88,9 +88,9 @@ const Footer = () => {
             © {new Date().getFullYear()} Poiotes. Wszelkie prawa zastrzeżone.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Polityka prywatności</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Warunki korzystania</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Polityka cookies</a>
+            <a href="#" className="text-sm text-gray-500 hover:text-blue-600">Polityka prywatności</a>
+            <a href="#" className="text-sm text-gray-500 hover:text-blue-600">Warunki korzystania</a>
+            <a href="#" className="text-sm text-gray-500 hover:text-blue-600">Polityka cookies</a>
           </div>
         </div>
       </div>
